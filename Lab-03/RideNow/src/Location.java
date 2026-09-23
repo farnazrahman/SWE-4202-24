@@ -1,5 +1,4 @@
 public class Location {
-
     private final String label;
     private final double x;
     private final double y;
@@ -9,10 +8,10 @@ public class Location {
         this.x = x;
         this.y = y;
     }
-
-    public Location(double x, double y)
-    {
-        this("Unknown", x, y);   //this is called constructor delegation
+    public Location(double x, double y) {
+        this.label = "Unknown";
+        this.x = x;
+        this.y = y;
     }
 
     public String getLabel() {
@@ -26,16 +25,14 @@ public class Location {
     public double getY() {
         return y;
     }
-
-    public double distanceTo(Location other) {
-        double dx = this.x - other.x;
-        double dy = this.y - other.y;
-        return Math.sqrt(dx * dx + dy * dy);
+    double distanceTo(Location other){
+        double xx= other.getX()-this.getX();
+        double yy= other.getY()-this.getY();
+        return Math.sqrt(xx*xx+yy*yy);
     }
 
     @Override
-    public String toString() {
-        return String.format("%s (%.2f, %.2f)", label, x, y);
-
+    public String toString(){
+        return label+" ("+String.format("%.2f", getX())+", "+String.format("%.2f",getY())+")";
     }
 }
