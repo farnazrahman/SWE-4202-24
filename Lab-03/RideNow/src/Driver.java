@@ -42,4 +42,5 @@ public class Driver {
     public String toString() {
         return "Driver[" + getId() + "] " + name + " (" + getLicencePlate() + ") [" + (isAvailable() ? "AVAILABLE" : "BUSY") + "]";
     }
+
 }

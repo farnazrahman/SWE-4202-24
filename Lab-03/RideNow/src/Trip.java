@@ -53,4 +53,5 @@ public class Trip {
     String getSummary(){
         return "Trip Summary\nPassenger : "+passenger.getName()+"\nDriver : "+driver.getName()+" ("+driver.getLicencePlate()+")\nFrom : "+from.toString()+"\nTo :"+to.toString()+"\nDistance : "+getDistance()+"\nFare : BDT "+calculateFare()+"\nStatus : "+(isCompleted()? "COMPLETED" : "IN PROGRESS");
     }
+
 }

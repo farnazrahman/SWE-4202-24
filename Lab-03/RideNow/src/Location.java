@@ -35,4 +35,5 @@ public class Location {
     public String toString(){
         return label+" ("+String.format("%.2f", getX())+", "+String.format("%.2f",getY())+")";
     }
+
 }
